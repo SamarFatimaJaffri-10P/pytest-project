@@ -82,22 +82,6 @@ Talha,Ghaffar,Staff Software Engineer
 Samar,Jaffri,Associate Software Engineer'''
 
 
-@pytest.fixture
-def example_people_data():
-    return [
-        {
-            'given_name': 'Talha',
-            'family_name': 'Ghaffar',
-            'title': 'Staff Software Engineer'
-        },
-        {
-            'given_name': 'Samar',
-            'family_name': 'Jaffri',
-            'title': 'Associate Software Engineer'
-        },
-    ]
-
-
 def test_format_data_for_display_(example_people_data):
     assert format_data_for_display(example_people_data) == [
         'Talha Ghaffar: Staff Software Engineer',
