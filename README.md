@@ -6,3 +6,9 @@ pytest project to learn pytest for automation testing
 
 ## Run test
 Run tests from terminal by executing `pytest filename.py`
+
+## Run multiple tests
+### Using sub-string
+Run multiple tests at once using sub-strings.
+- Open the terminal
+- In terminal run `py.test -k method_name_sub_string -v` i.e., `py.test -k format_data_for -v` for methods in test.py
