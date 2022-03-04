@@ -4,6 +4,16 @@
 # pytest-project
 pytest project to learn pytest for automation testing
 
+## Write test
+For writing testcases use following conventions
+- Name testcase method as `test_abc()`
+- Starting the name of testcase method with `test` is necessary
+
+## Writing testcases in object-oriented way
+For writing testcases in object-oriented way
+- Name the class as `TestXYZ`
+- Starting the name of class with `Test` is mandatory
+
 ## Run test
 Run tests from terminal by executing `pytest filename.py`
 
