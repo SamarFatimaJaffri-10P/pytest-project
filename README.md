@@ -26,6 +26,8 @@ Run multiple tests at once using sub-strings.
 ### Using markers
 Run multiple tests by grouping them using markers
 - Mark a testcase with marker by using a decorator `@pytest.mark.marker_name` over the test case
+- For telling program that a testcase will fail mark it with xfail as `@pytest.mark.xfail`
+- Similarly, for skipping a testcase mark it with `@pytest.mark.skip`
 - But for custom markers you have to register them first by writing their names in pytest.ini like
   ```
   [pytest]
