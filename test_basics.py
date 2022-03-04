@@ -1,6 +1,7 @@
 import pytest
 
 
+@pytest.mark.run_it
 def test_always_passes():
     assert True
 
@@ -9,6 +10,7 @@ def test_always_fails():
     assert False
 
 
+@pytest.mark.run_it
 def test_uppercase():
     assert 'uppercase letters'.upper() == 'UPPERCASE LETTERS'
 
