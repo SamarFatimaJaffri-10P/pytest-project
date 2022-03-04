@@ -3,3 +3,6 @@
 
 # pytest-project
 pytest project to learn pytest for automation testing
+
+## Run test
+Run tests from terminal by executing `pytest filename.py`
