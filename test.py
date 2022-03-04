@@ -93,3 +93,35 @@ def test_format_data_for_excel_(example_people_data):
     assert format_data_for_excel(example_people_data) == '''given,family,title
 Talha,Ghaffar,Staff Software Engineer
 Samar,Jaffri,Associate Software Engineer'''
+
+
+def is_palindrome(string):
+    new_string = ''
+    string = [string.replace(char, '') for char in string if not char.isalnum()]
+    for char in string:
+        if char.isalnum():
+            new_string += char
+    new_string = new_string.lower()
+
+    if new_string == new_string[::-1]:
+        return True
+    return False
+
+
+@pytest.mark.parametrize('palindrome', [
+    '',
+    'a',
+    'Bob',
+    'Never odd or even',
+    "Let's test this one"
+])
+def test_is_palindrome(palindrome):
+    assert is_palindrome(palindrome)
+
+
+@pytest.mark.parametrize('non_palindrome', [
+    'abc',
+    'cap'
+])
+def test_is_palindrome_not_palindrome(non_palindrome):
+    assert not is_palindrome(non_palindrome)
