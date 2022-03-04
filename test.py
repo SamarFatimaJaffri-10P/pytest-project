@@ -125,3 +125,16 @@ def test_is_palindrome(palindrome):
 ])
 def test_is_palindrome_not_palindrome(non_palindrome):
     assert not is_palindrome(non_palindrome)
+
+
+@pytest.mark.parametrize('maybe_palindrome, expected_results', [
+    ('', True),
+    ('a', True),
+    ('Bob', True),
+    ('Never odd or even', True),
+    ("Let's test this one", True),
+    ('abc', False),
+    ('cap', False)
+])
+def test_is_palindrome_(maybe_palindrome, expected_results):
+    assert is_palindrome(maybe_palindrome) == expected_results
